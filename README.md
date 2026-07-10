@@ -132,10 +132,26 @@ A suíte de testes utiliza o SQLite em memória (`:memory:`) por padrão, o que 
 ```bash
 npm run test
 ```
-Para ver o relatório de cobertura de código (100% de cobertura nos fluxos principais):
-```bash
-npm run test:coverage
-```
+
+---
+
+## 📊 Cobertura de Testes (Coverage)
+
+A cobertura de código (Coverage) serve para medir e demonstrar quais linhas, funções e ramificações (branches) do nosso backend são executadas e validadas pela suíte de testes automatizados.
+
+### Onde visualizar o resultado?
+
+- **Online (GitHub Pages)**:
+  Toda vez que uma nova alteração é integrada nas branches `main` ou `master`, o pipeline do GitHub Actions roda a cobertura de testes e publica o relatório estático automaticamente no GitHub Pages.
+  Você pode visualizar o relatório interativo completo em:
+  👉 **[https://fabionsam.github.io/educational-posts-backend/](https://fabionsam.github.io/educational-posts-backend/)**
+
+- **Localmente (Na sua máquina)**:
+  Você pode rodar os testes gerando o relatório localmente através do comando:
+  ```bash
+  npm run test:coverage
+  ```
+  Após a conclusão, uma pasta chamada `coverage/` será gerada no projeto. Para inspecionar graficamente o relatório, abra o arquivo `coverage/lcov-report/index.html` em qualquer navegador web.
 
 ---
 
