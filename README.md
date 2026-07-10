@@ -281,3 +281,24 @@ Você pode baixar a última versão gerada pela esteira de CI/CD executando:
 docker pull ghcr.io/<seu-usuario-ou-organizacao>/educational-posts-backend:latest
 ```
 
+---
+
+## 📬 Testando com o Postman
+
+Para facilitar o teste manual das rotas, há um arquivo de coleção pré-configurado na raiz do projeto: **[postman_collection.json](file:///postman_collection.json)**.
+
+### Como importar:
+1. Abra o **Postman** no seu computador.
+2. Clique no botão **Import** no painel superior esquerdo.
+3. Escolha ou arraste o arquivo `postman_collection.json` localizado na pasta raiz deste projeto.
+4. Clique em **Import** para confirmar. Uma nova coleção chamada **Educational Posts Backend** será carregada.
+
+### Como testar de forma automática:
+- **Autenticação Dinâmica**: A coleção está configurada com variáveis locais e scripts de automação.
+- **Passo 1 (Cadastrar Usuário)**: Execute a requisição `Register User` dentro da pasta `Auth` (já vem com um JSON de exemplo contendo dados de um usuário `professor`).
+- **Passo 2 (Autenticar)**: Execute a requisição `Login User` dentro da pasta `Auth` com o e-mail e senha cadastrados. 
+  > [!TIP]
+  > Após a resposta de sucesso do login, um script do Postman salvará automaticamente o Bearer Token JWT na variável da coleção (`{{token}}`). Você **não** precisa copiar e colar o token manualmente nas outras rotas.
+- **Passo 3 (Consumir rotas de posts)**: Abra qualquer requisição na pasta `Posts` (como `List Posts` ou `Create Post`) e clique em **Send**. A autenticação será aplicada de forma transparente em todas elas!
+
+
