@@ -278,7 +278,7 @@ O repositório possui uma esteira automatizada configurada via **GitHub Actions*
 ### Acessando a imagem gerada pelo GitHub Actions
 Você pode baixar a última versão gerada pela esteira de CI/CD executando:
 ```bash
-docker pull ghcr.io/<seu-usuario-ou-organizacao>/educational-posts-backend:latest
+docker pull ghcr.io/fabionsam/educational-posts-backend:latest
 ```
 
 ---
