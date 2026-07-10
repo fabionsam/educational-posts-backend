@@ -2,6 +2,9 @@
 
 Este é o repositório do back-end para a aplicação de blogging voltada a postagens educacionais. O projeto foi desenvolvido em **Node.js** utilizando o framework **Express** e persistência em banco de dados **PostgreSQL** em desenvolvimento/produção (e **SQLite** em ambiente de testes), gerenciado pelo ORM **Sequelize**.
 
+> [!TIP]
+> **API de Testes Online**: Uma instância de demonstração desta API está rodando na nuvem e disponível em: **https://educational-posts-backend.onrender.com**
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas
