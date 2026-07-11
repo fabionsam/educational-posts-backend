@@ -137,7 +137,7 @@ npm run test
 
 ## 📊 Cobertura de Testes (Coverage)
 
-A cobertura de código (Coverage) serve para medir e demonstrar quais linhas, funções e ramificações (branches) do nosso backend são executadas e validadas pela suíte de testes automatizados.
+A cobertura de código (Coverage) serve para medir e demonstrar quais linhas, funções e ramificações (branches) do backend são executadas e validadas pela suíte de testes automatizados.
 
 ### Onde visualizar o resultado?
 
@@ -320,4 +320,15 @@ Para facilitar o teste manual das rotas, há um arquivo de coleção pré-config
   > Após a resposta de sucesso do login, um script do Postman salvará automaticamente o Bearer Token JWT na variável da coleção (`{{token}}`). Você **não** precisa copiar e colar o token manualmente nas outras rotas.
 - **Passo 3 (Consumir rotas de posts)**: Abra qualquer requisição na pasta `Posts` (como `List Posts` ou `Create Post`) e clique em **Send**. A autenticação será aplicada de forma transparente em todas elas!
 
+---
+
+## 🧠 Relato de Experiências e Desafios
+
+Durante o desenvolvimento deste projeto, enfrentei e superei diversos desafios técnicos, o que resultou em um grande aprendizado prático:
+
+### 🐳 Aprendizado em Docker e Containerização
+No início do projeto, eu possuía pouca experiência prática com ferramentas de containerização. Compreender como isolar a aplicação Node.js e o banco de dados PostgreSQL em containers separados e configurar a comunicação entre eles via rede virtual do Docker Compose foi um desafio marcante. A implementação do *hot-reloading* dentro do container de desenvolvimento exigiu entender o mapeamento de volumes locais, o que otimizou significativamente o fluxo de trabalho diário.
+
+### 🚀 Integração e Entrega Contínuas (CI/CD)
+Outro grande desafio foi a criação de um pipeline automatizado com GitHub Actions. Conceitos de automação de testes a cada commit/pull request (CI) e o empacotamento seguro da aplicação em imagens publicadas no GitHub Container Registry (CD) eram novos para mim. Superar problemas de variáveis de ambiente, permissões de autenticação do `GITHUB_TOKEN` e sincronização do banco de dados SQLite em memória durante a suíte de testes na máquina virtual de CI trouxe uma maturidade técnica significativa.
 
