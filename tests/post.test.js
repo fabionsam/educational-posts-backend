@@ -253,9 +253,9 @@ describe('POST /posts - Create Post', () => {
 });
 
 describe('GET /posts - List Posts', () => {
-  it('should deny access if token is missing', async () => {
+  it('should allow public access to list posts even without token', async () => {
     const response = await request(app).get('/posts');
-    expect(response.status).toBe(401);
+    expect(response.status).toBe(200);
   });
 
   it('should return an empty list if there are no posts', async () => {

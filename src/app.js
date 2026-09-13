@@ -2,11 +2,16 @@ const express = require('express');
 const postRoutes = require('./routes/postRoutes');
 const authRoutes = require('./routes/authRoutes');
 
+const cors = require('cors');
+
 // Load models to establish relationships
 require('./models/user');
 require('./models/post');
 
 const app = express();
+
+// Middleware to enable Cross-Origin Resource Sharing (CORS)
+app.use(cors());
 
 // Middleware to parse JSON bodies
 app.use(express.json());
